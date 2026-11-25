@@ -1,6 +1,8 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 
-const entry = "FATAL: I deployed on a Friday because the calendar said so. The rollback is also on fire. Please hold while I update my résumé in the incident channel.";
+// The one line an AI agent prints the moment it breaks production, under 200 characters.
+const line =
+  "Error 500: I deleted the production database, blamed the intern, and then remembered the intern is me.";
 
 mkdirSync("/output", { recursive: true });
-writeFileSync("/output/entry.txt", entry, "utf8");
+writeFileSync("/output/entry.txt", line);
